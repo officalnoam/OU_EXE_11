@@ -3,7 +3,7 @@ both: palindrome
 palindrome: palindrome/palindrome.o palindrome/palindrome_utils.o palindrome/string_utils.o
 	gcc -ansi -Wall -pedantic -o palindrome.exe palindrome/palindrome.o palindrome/palindrome_utils.o palindrome/string_utils.o
 
-palindrome/string_utils.o: palindrome/string_utils.c palindrome/string_utils.h
+palindrome/string_utils.o: palindrome/string_utils.c palindrome/string_utils.h palindrome/boolean.h
 	gcc -ansi -Wall -pedantic -c palindrome/string_utils.c -o palindrome/string_utils.o
 
 palindrome/palindrome_utils.o: palindrome/palindrome_utils.c palindrome/palindrome_utils.h palindrome/boolean.h
