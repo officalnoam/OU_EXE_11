@@ -9,12 +9,17 @@ Output:
   char*: The inputted string from the user. 
 */
 char* get_string_from_user() {
+  int i;
   char* str = (char*)malloc((MAX_STRING_SIZE + 1) * sizeof(char));
   if (str == NULL)
   {
     printf("Memory allocation failed");
     return NULL; 
   }
+
+  for (i = 0; i < MAX_STRING_SIZE + 1; i++)
+    str[i] = '\0';
+
   printf("Please input a string that should be checked for being a palindrome:\n");
   fgets(str, MAX_STRING_SIZE, stdin);
   str[MAX_STRING_SIZE] = '\0';
