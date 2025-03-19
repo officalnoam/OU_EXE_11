@@ -17,7 +17,7 @@ int main()
   char* str = get_string_from_user();
   int result;
   
-  printf("Inputted string is: %s", str);
+  printf("Inputted string is: %s\n", str);
   result = palindrome(str);
   if (result)
     printf("The string is a palindrome\n");
