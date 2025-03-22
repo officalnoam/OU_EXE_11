@@ -25,6 +25,9 @@ int main()
   char* str = get_string_from_user();
   int result;
   
+  if (str == NULL)
+    return 1;
+
   printf("Inputted string is: %s\n", str);
   result = palindrome(str);
   if (result)

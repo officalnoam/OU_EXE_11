@@ -10,7 +10,7 @@ Output:
 */
 char* get_string_from_user() {
   int i;
-  char* str = (char*)malloc((MAX_STRING_SIZE + 1) * sizeof(char));
+  char* str = (char*) malloc((MAX_STRING_SIZE + 1) * sizeof(char));
   if (str == NULL)
   {
     printf("Memory allocation failed");
@@ -66,5 +66,4 @@ void remove_whitespaces_from_string(char* str) {
     }
   }
   str[lastCharIndex+1] = '\0';
-  
-}  
+}

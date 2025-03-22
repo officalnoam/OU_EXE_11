@@ -12,9 +12,9 @@ Output-
 */
 bool check_if_string_is_palindrome(char* str) {
   int i;
-  for (i=0; i <= strlen(str) / 2; i ++)
+  for (i=0; i <= strlen(str) / 2; i++)
   {
-    if (str[i] != str[strlen(str)-i-1])
+    if (str[i] != str[strlen(str) - i - 1])
       return false;
   }
   return true;
