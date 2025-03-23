@@ -3,10 +3,7 @@
 #include <stdlib.h>
 
 /*
-This function will get a string from a user.
-
-Output:
-  char*: The inputted string from the user. 
+This function will get a string from the user.
 */
 char* get_string_from_user() {
   int i;
@@ -25,15 +22,9 @@ char* get_string_from_user() {
   str[MAX_STRING_SIZE] = '\0';
   return str;
 }
+
 /*
-This function will check if a specific character is a `whitespace` of any type.
-In this context a whitespace wikk be a literal whitespace, a tab character, a newline and an EOF.
-
-Input-
-  char c: The character being checked.
-
-Output-
-  bool: true if the character is a whitespace otherwise false. 
+This function checks if a specific character is a 'whitespace', meaning a space, tab, newline or EOF.
 */
 bool check_if_char_is_whitespace(char c) {
   if (c == ' ' || c == '\t' || c == '\n' || c == EOF)
@@ -42,10 +33,11 @@ bool check_if_char_is_whitespace(char c) {
 }
 
 /*
-Removes all whitespaces (whitespaces, tabs, newlines and EOFs) from a string.
-
-Input-
-  char* str: The string the whitespaces are being removed from.
+This function removes whitespaces from a string- it will save the index of the last char starting at 0,
+and then go over the string. If a character is a whitespace, the loop will continue.
+If not, then the character will be put in the index for the last character.
+this allows to override the spaces within a string while going over it, while 
+keeping all non whitespace characters the same.
 */
 void remove_whitespaces_from_string(char* str) {
   int lastCharIndex = -1;

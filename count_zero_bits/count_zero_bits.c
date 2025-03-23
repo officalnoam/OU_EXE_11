@@ -4,12 +4,7 @@
 #include <stdlib.h>
 
 /*
-This function will count the amount of zero bits in the binary representation of its input.
-
-Input-
-  unsigned int num: The number being checked.
-Output-
-  int: The amount of zero bits
+This function will convert the number to its binary representation, and then count the 0s in the representation. 
 */
 int count_zero_bits(unsigned int num)
 {
@@ -19,8 +14,9 @@ int count_zero_bits(unsigned int num)
   
   if (binary == NULL)
     return -1;
-
-  for (i = 0; i < sizeof(int) * 8; i++)
+  
+  /*Count the amount of 0s in the binary representation*/
+  for (i = 0; i < BYTES_TO_BITS(sizeof(int)); i++)
   {
     if (binary[i] == 0)
       zero_bits++;
@@ -42,5 +38,5 @@ int main()
     return 1;
   
   printf("The number that was inputted was %u. Its binary representation has %d zeros\n", num, zero_bits);
-  return 1;
+  return 0;
 }
